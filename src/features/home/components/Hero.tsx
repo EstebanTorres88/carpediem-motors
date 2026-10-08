@@ -16,9 +16,7 @@ const Hero = () => {
 
 			<div className={styles.content}>
 				<div className={styles.copy}>
-					<p className={styles.eyebrow}>
-						Carpediem Motors · Costa Rica
-					</p>
+					<p className={styles.eyebrow}>Carpediem Motors · Costa Rica</p>
 
 					<h1 className={styles.title}>
 						Puro placer <br /> de conducir

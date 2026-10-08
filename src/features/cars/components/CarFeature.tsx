@@ -11,7 +11,9 @@ export const CarFeature = ({ features }: CarFeatureProps) => {
 
 			<ul className={styles.list}>
 				{features.map((feature) => (
-					<li key={feature} className={styles.item}>{feature}</li>
+					<li key={feature} className={styles.item}>
+						{feature}
+					</li>
 				))}
 			</ul>
 		</>

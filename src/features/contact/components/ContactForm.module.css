@@ -1,0 +1,98 @@
+/* ContactForm estilo Lamborghini: campos negros con borde fino, foco amarillo. */
+.form {
+	background: #000;
+	color: #fff;
+	padding: 0;
+}
+
+.title {
+	font-family: var(--font-display);
+	font-size: clamp(1.8rem, 4vw, 2.8rem);
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1;
+	margin: 0 0 8px;
+}
+
+.subtitle {
+	color: var(--muted);
+	margin: 0 0 28px;
+	max-width: 52ch;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.field {
+	display: grid;
+	gap: 8px;
+}
+
+.field label {
+	font-family: var(--font-display);
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: rgba(255,255,255,0.8);
+}
+
+.field input,
+.field textarea {
+	background: #0c0c0c;
+	border: 1px solid var(--border);
+	color: #fff;
+	font-size: 14px;
+	padding: 14px 16px;
+	width: 100%;
+	outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+	border-color: var(--accent);
+}
+
+.field textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.wide {
+	grid-column: 1 / -1;
+}
+
+.error {
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.submit {
+	margin-top: 20px;
+	background: #fff;
+	color: #000;
+	border: none;
+	font-family: var(--font-display);
+	font-size: 13px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	padding: 15px 32px;
+	cursor: pointer;
+	clip-path: var(--cut);
+}
+
+.submit:hover {
+	background: var(--accent-hover);
+}
+
+@media (max-width: 640px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}

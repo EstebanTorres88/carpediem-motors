@@ -1,0 +1,23 @@
+/* CarHero: foto a sangre completa, llena el marco sin bandas. */
+.hero {
+	background: #0c0c0c;
+	border: 1px solid var(--border);
+	max-width: var(--container);
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.hero img {
+	width: 100%;
+	height: clamp(320px, 52vh, 520px);
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+@media (max-width: 640px) {
+	.hero img {
+		height: 260px;
+	}
+}

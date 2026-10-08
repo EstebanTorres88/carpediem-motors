@@ -1,19 +1,17 @@
-import { Outlet } from "react-router-dom"
-import { Navbar } from "../layout/Navbar.tsx"
-import { Footer } from "../layout/Footer.tsx"
+import { Outlet } from "react-router-dom";
+import { Footer } from "../layout/Footer.tsx";
+import { Navbar } from "../layout/Navbar.tsx";
 
 export const Layout = () => {
-  return (
-    <>
-      <Navbar></Navbar>
+	return (
+		<>
+			<Navbar></Navbar>
 
-      <main>
-        <Outlet></Outlet>
+			<main>
+				<Outlet></Outlet>
+			</main>
 
-      </main>
-
-      <Footer></Footer>
-    </>
-  )
-}
-
+			<Footer></Footer>
+		</>
+	);
+};

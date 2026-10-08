@@ -1,0 +1,56 @@
+/* ContactInfo estilo Lamborghini: columna editorial con línea amarilla. */
+.copy {
+	background: #000;
+	color: #fff;
+}
+
+.eyebrow {
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	margin: 0 0 12px;
+	padding-left: 14px;
+	border-left: 3px solid var(--accent);
+}
+
+.title {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 5vw, 3.2rem);
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 0.95;
+	margin: 0 0 16px;
+}
+
+.text {
+	color: var(--muted);
+	max-width: 48ch;
+	margin: 0 0 24px;
+}
+
+.details {
+	display: grid;
+	gap: 0;
+	border-top: 1px solid var(--border);
+}
+
+.details p {
+	margin: 0;
+	padding: 18px 0;
+	border-bottom: 1px solid var(--border);
+	font-size: 14px;
+	color: var(--muted);
+}
+
+.details strong {
+	display: block;
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: #fff;
+	margin-bottom: 4px;
+}

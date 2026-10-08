@@ -1,0 +1,173 @@
+/* Hero recreado del sitio Lamborghini: imagen a pantalla completa,
+   titular gigante abajo-izquierda y botón blanco abajo-derecha. */
+.hero {
+	position: relative;
+	min-height: 100svh;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	background: #000;
+	isolation: isolate;
+}
+
+.media {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 55%;
+	transform-origin: center 60%;
+	animation: heroZoom 18s ease-in-out infinite alternate;
+	will-change: transform;
+}
+
+/* Movimiento lento continuo: simula el video del hero original. */
+@keyframes heroZoom {
+	from {
+		transform: scale(1) translate(0, 0);
+	}
+	to {
+		transform: scale(1.12) translate(-1.5%, -1%);
+	}
+}
+
+/* Degradado inferior fuerte: el título blanco se lee sobre la foto. */
+.overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.45) 0%,
+		rgba(0, 0, 0, 0.05) 40%,
+		rgba(0, 0, 0, 0.88) 100%
+	);
+}
+
+/* Fila inferior: copia a la izquierda, botones a la derecha. */
+.content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 96px 20px 64px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 32px;
+	animation: heroRise 0.9s ease both;
+}
+
+@keyframes heroRise {
+	from {
+		opacity: 0;
+		transform: translateY(28px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.copy {
+	min-width: 0;
+}
+
+.eyebrow {
+	font-family: var(--font-display);
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #fff;
+	margin: 0 0 12px;
+}
+
+.title {
+	font-family: var(--font-display);
+	font-stretch: condensed;
+	font-size: clamp(3.5rem, 9vw, 7.5rem);
+	line-height: 0.9;
+	font-weight: 800;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	margin: 0;
+	color: #fff;
+	text-wrap: balance;
+}
+
+.actions {
+	display: grid;
+	gap: 12px;
+	justify-items: end;
+	flex-shrink: 0;
+}
+
+/* Botón blanco rectangular con flecha, como el original. */
+.primary {
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+	font-family: var(--font-display);
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 18px 28px;
+	transition: background 0.2s ease;
+}
+
+.primary:hover {
+	background: var(--accent-hover);
+}
+
+.secondary {
+	color: #fff;
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	padding-bottom: 4px;
+}
+
+.secondary:hover {
+	color: var(--muted);
+	border-color: #fff;
+}
+
+@media (max-width: 900px) {
+	.content {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 80px 20px 56px;
+	}
+
+	.actions {
+		justify-items: start;
+		width: 100%;
+	}
+
+	.primary {
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.media img,
+	.content {
+		animation: none;
+	}
+}

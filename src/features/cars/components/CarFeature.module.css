@@ -1,0 +1,48 @@
+/* CarFeature estilo Lamborghini: lista técnica con rombos amarillos y divisores. */
+.title {
+	font-family: var(--font-display);
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: #fff;
+	margin: 28px 0 8px;
+	padding-top: 16px;
+	border-top: 2px solid var(--accent);
+	width: fit-content;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 12px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #d6d6d6;
+	padding: 14px 0 14px 28px;
+	position: relative;
+	border-bottom: 1px solid var(--border);
+}
+
+.item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 11px;
+	height: 11px;
+	background: var(--accent);
+	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+@media (max-width: 640px) {
+	.list {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,85 @@
+/* NotFound estilo Lamborghini: 404 gigante condensado, botones con corte. */
+.section {
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 120px 20px;
+	background: #000;
+}
+
+.code {
+	display: block;
+	font-family: var(--font-display);
+	font-size: clamp(4rem, 12vw, 8rem);
+	font-weight: 800;
+	line-height: 0.9;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+}
+
+.kicker {
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: var(--accent);
+	margin: 16px 0 0;
+	padding-left: 14px;
+	border-left: 3px solid var(--accent);
+}
+
+.title {
+	font-family: var(--font-display);
+	font-size: clamp(1.8rem, 4vw, 2.6rem);
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1;
+	margin: 12px 0;
+	color: #fff;
+}
+
+.text {
+	color: var(--muted);
+	font-size: 15px;
+	margin: 0;
+	max-width: 52ch;
+}
+
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 28px;
+}
+
+.primary,
+.secondary {
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	padding: 13px 28px;
+	clip-path: var(--cut);
+}
+
+.primary {
+	background: #fff;
+	color: #000;
+}
+
+.primary:hover {
+	background: var(--accent-hover);
+}
+
+.secondary {
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.secondary:hover {
+	border-color: var(--accent);
+	color: var(--muted);
+}

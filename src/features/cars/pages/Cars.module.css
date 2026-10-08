@@ -1,0 +1,39 @@
+/* Cars page: black catalog with condensed title and bordered empty state. */
+.page {
+	background: #000;
+	padding-top: 56px;
+	padding-bottom: 80px;
+}
+
+.title {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 5vw, 3.2rem);
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 0.95;
+	color: #fff;
+	margin: 0 0 24px;
+}
+
+.empty {
+	margin: 0;
+	padding: 48px 32px;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.75);
+	background: #0c0c0c;
+	border: 1px solid var(--border);
+	border-top: 3px solid #fff;
+}
+
+@media (max-width: 640px) {
+	.page {
+		padding-top: 40px;
+		padding-bottom: 64px;
+	}
+
+	.empty {
+		padding: 36px 20px;
+	}
+}

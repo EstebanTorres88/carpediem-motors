@@ -1,0 +1,79 @@
+/* CardInfo estilo Lamborghini: titular mayúscula, specs con divisores finos. */
+.info {
+	background: #000;
+	color: #fff;
+	padding: 32px 0 8px;
+}
+
+.location {
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: #fff;
+	margin: 0 0 8px;
+	padding-left: 14px;
+	border-left: 3px solid var(--accent);
+}
+
+.name {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 5vw, 3.4rem);
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 0.95;
+	margin: 0 0 20px;
+}
+
+.specs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+	margin-bottom: 28px;
+}
+
+.specs span {
+	padding: 16px 28px 16px 0;
+	margin-right: 28px;
+	border-right: 1px solid var(--border);
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--muted);
+}
+
+.specs span:last-child {
+	border-right: none;
+}
+
+.specs strong {
+	display: block;
+	font-family: var(--font-display);
+	font-size: 18px;
+	font-weight: 800;
+	color: #fff;
+}
+
+.subtitle {
+	font-family: var(--font-display);
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: #fff;
+	margin: 28px 0 12px;
+	padding-top: 4px;
+	border-top: 2px solid var(--accent);
+	padding-top: 16px;
+	width: fit-content;
+}
+
+.description {
+	color: rgba(255,255,255,0.75);
+	max-width: 70ch;
+	margin: 0;
+	line-height: 1.7;
+}

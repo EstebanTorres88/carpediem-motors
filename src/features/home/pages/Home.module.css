@@ -1,0 +1,68 @@
+/* Home estilo Lamborghini: encabezado con línea amarilla lateral, enlace anguloso. */
+.featured {
+	padding: 80px 0 0;
+	background: #000;
+}
+
+.header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 16px;
+	max-width: var(--container);
+	margin: 0 auto 32px;
+	padding: 0 20px;
+}
+
+.eyebrow {
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: #fff;
+	margin: 0 0 8px;
+	padding-left: 14px;
+	border-left: 3px solid var(--accent);
+}
+
+.title {
+	font-family: var(--font-display);
+	font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+	line-height: 1;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+	margin: 0;
+	color: #fff;
+}
+
+.link {
+	color: #000;
+	background: #fff;
+	font-family: var(--font-display);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 12px 24px;
+	clip-path: var(--cut);
+	transition: background 0.2s ease;
+}
+
+.link:hover {
+	background: var(--accent-hover);
+}
+
+@media (max-width: 640px) {
+	.featured {
+		padding: 56px 0 0;
+	}
+
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
